@@ -1,3 +1,4 @@
+import { UpdateRequestForm } from '@/components/Forms/UpdateRequestForm';
 import { ProtectedRoute, SessionRoute } from '@/components/Routes';
 import { Navigate, Outlet } from 'react-router-dom';
 import { SignIn, action as signInAction } from './auth/SignIn';
@@ -53,6 +54,11 @@ export const appRoutes = [
 							{
 								path: 'new',
 								element: <ProtectedRoute route={<NewRequest />} />,
+								action: newRequestAction,
+							},
+							{
+								path: 'update',
+								element: <ProtectedRoute route={<UpdateRequestForm />} />,
 								action: newRequestAction,
 							},
 						],

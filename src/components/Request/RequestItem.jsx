@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-
+//import { Button } from 'react-bootstrap';
 const colClasses = 'text-sm flex-1 text-center';
 
 export function RequestItem({ request, isEven = false }) {
@@ -29,9 +29,21 @@ export function RequestItem({ request, isEven = false }) {
 			className={`flex items-center space-x-5 p-2 py-4 w-full ${bgColor}`}
 		>
 			<td className={colClasses}>
-				<Link className="text-indigo-600 cursor-pointer hover:underline">
+				<Link className="text-indigo-600 cursor-pointer hover:underline" to="/client/requests/update/">
 					{formattedServiceNumber}
 				</Link>
+				{/* <Link className="text-indigo-600 cursor-pointer hover:underline" to="/client/requests/update/`_id`">
+					{formattedServiceNumber}
+				</Link> */}
+				{/* <Link className="text-indigo-600 cursor-pointer hover:underline" to = "/client/requests/update">
+					<Button	type="submit">
+						mensaje del boton
+					</Button>
+					<Button onClick="updateRequest(`_id`)"> size="sm" variant="danger" type="submit">
+				"Eliminar"`{serviceNumber}`
+				</Button>
+				</Link> */}
+				
 			</td>
 			<td
 				className={colClasses}
